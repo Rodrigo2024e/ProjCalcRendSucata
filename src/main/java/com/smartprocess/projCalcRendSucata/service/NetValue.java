@@ -13,8 +13,8 @@ public class NetValue {
 	
 	public double netValue(RawMaterial rawMaterial) {
 		
-		return rawMaterial.getPesoBruto() * materialYield.yield(rawMaterial);
-		 
+		double discount = rawMaterial.getPesoBruto() - materialYield.yield(rawMaterial);
+		 return rawMaterial.getPesoBruto() - discount;
 	}
 	
 }
